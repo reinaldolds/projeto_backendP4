@@ -38,7 +38,7 @@ public class SecurityFilter
             var usuario = usuarioRepository.findByLogin(subject);
 
             var authentication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
-            SecurityContextHolder.getContext()
+            SecurityContextHolder.getContext() //manda para security
             .setAuthentication(authentication);
         }
 
