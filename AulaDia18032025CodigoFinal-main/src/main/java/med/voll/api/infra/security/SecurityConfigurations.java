@@ -21,6 +21,7 @@ public class SecurityConfigurations {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(sm -> sm.sessionCreationPolicy
                         (SessionCreationPolicy.STATELESS))
+
                 .build();
     }
     @Bean
